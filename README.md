@@ -33,10 +33,18 @@ mkdir jobs
 docker run -v ${PWD}/jobs:/app/jobs kaushallb/linkedin-scraper:1.0
 ```
 
-Windows PowerShell:
-```powershell
+### Linux / macOS
+```bash
+docker pull kaushallb/linkedin-scraper:1.0
 mkdir jobs
-docker run -v ${PWD}/jobs:/app/jobs kaushallb/linkedin-scraper:1.0
+docker run --rm -v "$(pwd)/jobs:/app/jobs" kaushallb/linkedin-scraper:1.0
+```
+
+### Windows PowerShell
+```bash
+docker pull kaushallb/linkedin-scraper:1.0
+mkdir jobs
+docker run --rm -v "${PWD}\jobs:/app/jobs" kaushallb/linkedin-scraper:1.0
 ```
 
 ### Building from Source
@@ -45,7 +53,15 @@ docker run -v ${PWD}/jobs:/app/jobs kaushallb/linkedin-scraper:1.0
 git clone https://github.com/KaushallB/Automated-LinkedIn-Job-Scraper.git
 cd Automated-LinkedIn-Job-Scraper
 docker build -t linkedin-scraper .
-docker run -v ${PWD}/jobs:/app/jobs linkedin-scraper
+```
+### Linux/macOS
+```bash
+docker run --rm -v "$(pwd)/jobs:/app/jobs" linkedin-scraper
+```
+
+### Windows PowerShell
+```bash
+docker run --rm -v "${PWD}\jobs:/app/jobs" linkedin-scraper
 ```
 
 ## Container Components
