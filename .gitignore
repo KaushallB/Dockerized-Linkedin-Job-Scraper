@@ -1,0 +1,7 @@
+# Ignore the entire jobs folder
+jobs/
+
+# Ignore all CSV files
+*.csv
+
+
