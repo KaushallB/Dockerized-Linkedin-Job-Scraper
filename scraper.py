@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.chrome.options import Options 
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -9,8 +9,6 @@ import time
 import csv
 import os
 from datetime import datetime
-from selenium.webdriver.edge.service import Service 
-from selenium.webdriver.edge.options import Options as EdgeOptions
 
 
 def get_driver():
@@ -24,7 +22,7 @@ def get_driver():
     return driver
 
 
-#creating jobs folder 
+#Creating jobs folder 
 save_path = "/app/jobs"
 
 if not os.path.exists(save_path):
@@ -36,7 +34,7 @@ driver = get_driver()
 driver.get(url)
 time.sleep(5) 
 
-#quiting sign in pop up
+#Quiting sign in pop up
 button=driver.find_element(By.XPATH,'//*[@id="base-contextual-sign-in-modal"]/div/section/button')
 button.click()
 time.sleep(3)  

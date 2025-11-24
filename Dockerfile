@@ -27,3 +27,6 @@ VOLUME ["/app/jobs"]
 CMD ["python3","scraper.py"]
 
 
+
+
+
